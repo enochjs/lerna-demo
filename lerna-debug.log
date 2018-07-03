@@ -1,18 +1,108 @@
-0 silly input [ 'package/moudle1' ]
-1 silly flags { _: [ 'add' ],
-1 silly flags   'reject-cycles': false,
-1 silly flags   rejectCycles: false,
-1 silly flags   dev: false,
-1 silly flags   D: false,
-1 silly flags   scope: 'module2',
-1 silly flags   args: [ 'package/moudle1' ] }
+0 silly input [ 'publish' ]
+1 silly flags { _: [ 'publish' ], 'reject-cycles': false, rejectCycles: false }
 2 verbose rootPath /Users/wangyongdong/enochjs/lerna-demo
 3 info version 2.11.0
 4 silly isInitialized
 5 silly isInitialized true
 6 silly existsSync /Users/wangyongdong/enochjs/lerna-demo/VERSION
-7 info scope module2
-8 silly initialize attempt
-9 error initialize callback with error
-10 error Error: Package `package/moudle1` doesn't exist
-10 error     at got.then.catch.err (/Users/wangyongdong/.nvm/versions/node/v6.9.1/lib/node_modules/lerna/node_modules/package-json/index.js:62:11)
+7 silly initialize attempt
+8 info current version 0.0.0
+9 silly isDetachedHead
+10 silly getCurrentBranch
+11 verbose getCurrentBranch master
+12 verbose isDetachedHead false
+13 silly getCurrentBranch
+14 verbose getCurrentBranch master
+15 silly getUpdates
+16 info Checking for updated packages...
+17 silly hasTags
+18 verbose hasTags false
+19 info Comparing with initial commit.
+20 verbose updated module1
+21 verbose updated module2
+22 info Checking for prereleased packages...
+23 silly collectDependents
+24 silly isPackageDependentOf module1 module1
+25 silly isPackageDependentOf module1 module2
+26 silly isPackageDependentOf module2 module1
+27 verbose dependent module2 depends on module1
+28 silly isPackageDependentOf module2 module2
+29 silly isPackageDependentOf module1 module2
+30 silly collectUpdates
+31 verbose has filtered update module1
+32 verbose has filtered update module2
+33 silly initialize success
+34 silly execute attempt
+35 silly addFile /Users/wangyongdong/enochjs/lerna-demo/lerna.json
+36 silly runScriptSync preversion undefined
+37 silly runScriptSync preversion module1
+38 silly runScriptSync version module1
+39 silly runScriptSync preversion module2
+40 silly runScriptSync version module2
+41 silly runScriptSync version undefined
+42 silly addFile /Users/wangyongdong/enochjs/lerna-demo/packages/module1/package.json
+43 silly addFile /Users/wangyongdong/enochjs/lerna-demo/packages/module2/package.json
+44 silly commit v0.0.1
+45 verbose commit [ 'commit', '--no-verify', '-m', 'v0.0.1' ]
+46 silly addTag v0.0.1
+47 silly runScriptSync postversion module1
+48 silly runScriptSync postversion module2
+49 silly runScriptSync postversion undefined
+50 info publish Publishing packages to npm...
+51 silly existsSync /Users/wangyongdong/enochjs/lerna-demo/packages/module1/scripts/prepublish.js
+52 verbose execScript No prepublish script found at /Users/wangyongdong/enochjs/lerna-demo/packages/module1/scripts/prepublish.js
+53 silly existsSync /Users/wangyongdong/enochjs/lerna-demo/packages/module2/scripts/prepublish.js
+54 verbose execScript No prepublish script found at /Users/wangyongdong/enochjs/lerna-demo/packages/module2/scripts/prepublish.js
+55 verbose publishing module1
+56 silly publishTaggedInDir latest module1
+57 silly getExecOpts { cwd: '/Users/wangyongdong/enochjs/lerna-demo/packages/module1' }
+58 error publish Retrying failed publish: module1
+59 verbose publish error undefined
+60 verbose publishing module1
+61 silly publishTaggedInDir latest module1
+62 silly getExecOpts { cwd: '/Users/wangyongdong/enochjs/lerna-demo/packages/module1' }
+63 error publish Retrying failed publish: module1
+64 verbose publish error undefined
+65 verbose publishing module1
+66 silly publishTaggedInDir latest module1
+67 silly getExecOpts { cwd: '/Users/wangyongdong/enochjs/lerna-demo/packages/module1' }
+68 error publish Retrying failed publish: module1
+69 verbose publish error undefined
+70 verbose publishing module1
+71 silly publishTaggedInDir latest module1
+72 silly getExecOpts { cwd: '/Users/wangyongdong/enochjs/lerna-demo/packages/module1' }
+73 error publish Retrying failed publish: module1
+74 verbose publish error undefined
+75 verbose publishing module1
+76 silly publishTaggedInDir latest module1
+77 silly getExecOpts { cwd: '/Users/wangyongdong/enochjs/lerna-demo/packages/module1' }
+78 error publish Ran out of retries while publishing module1 Error: Command failed: npm publish --tag latest
+78 error publish npm ERR! Darwin 17.6.0
+78 error publish npm ERR! argv "/Users/wangyongdong/.nvm/versions/node/v6.9.1/bin/node" "/Users/wangyongdong/.nvm/versions/node/v6.9.1/bin/npm" "publish" "--tag" "latest"
+78 error publish npm ERR! node v6.9.1
+78 error publish npm ERR! npm  v3.10.8
+78 error publish npm ERR! code ENEEDAUTH
+78 error publish
+78 error publish npm ERR! need auth auth required for publishing
+78 error publish npm ERR! need auth You need to authorize this machine using `npm adduser`
+78 error publish
+78 error publish npm ERR! Please include the following file with any support request:
+78 error publish npm ERR!     /Users/wangyongdong/enochjs/lerna-demo/packages/module1/npm-debug.log
+78 error publish
+78 error publish     at Promise.all.then.arr (/Users/wangyongdong/.nvm/versions/node/v6.9.1/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+78 error publish     at process._tickCallback (internal/process/next_tick.js:103:7)
+79 error execute callback with error
+80 error Error: Command failed: npm publish --tag latest
+80 error npm ERR! Darwin 17.6.0
+80 error npm ERR! argv "/Users/wangyongdong/.nvm/versions/node/v6.9.1/bin/node" "/Users/wangyongdong/.nvm/versions/node/v6.9.1/bin/npm" "publish" "--tag" "latest"
+80 error npm ERR! node v6.9.1
+80 error npm ERR! npm  v3.10.8
+80 error npm ERR! code ENEEDAUTH
+80 error
+80 error npm ERR! need auth auth required for publishing
+80 error npm ERR! need auth You need to authorize this machine using `npm adduser`
+80 error
+80 error npm ERR! Please include the following file with any support request:
+80 error npm ERR!     /Users/wangyongdong/enochjs/lerna-demo/packages/module1/npm-debug.log
+80 error
+80 error     at Promise.all.then.arr (/Users/wangyongdong/.nvm/versions/node/v6.9.1/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
